@@ -1,2 +1,2 @@
 # BioinfoScripts
-Scripts de análises bioinformáticas que uso bastante
+Scripts de análises bioinformáticas que uso bastante. 

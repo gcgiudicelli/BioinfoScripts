@@ -1,8 +1,9 @@
 ## Script para obter correspondência entre genes ortólogos (H. sapiens and M. musculus)
+## Input: arquivo com genes de M. musculus; output: arquivo com genes de H. sapiens
 ## Por Kowalski TW (thaynewk) e Giudicelli GC (gcgiudicelli)
 
 ## Informar em qual diretório (pasta) você está trabalhando
-setwd("~/Desktop/NBio_R46")
+setwd("~/NomeDaPasta/NomeDaPasta")
 
 ## Instalar os pacotes necessários para a análise
 ## Você só precisa instalar uma única vez
@@ -29,7 +30,7 @@ View(attributes)
 View(filters)
 
 ## Carregar o seu arquivo input - neste caso, um arquivo .txt contendo os genes de M. musculus os quais quero saber os ortólogos de H. sapiens
-genes <- read.table("2Trans.Venn.Genes.txt", header = FALSE)
+genes <- read.table("GenesMmusculusNomeArquivo.txt", header = FALSE)
 
 ## Visualizar se o arquivo foi corretamente carregado
 View(genes)
@@ -52,4 +53,4 @@ View(orthologous)
 ## Se necessário, corrija o nome do gene e refaça a análise.
 
 ## Salvar o resultado do objeto 'orthologous' em um arquivo .txt
-write.table(orthologous, "2Trans.Venn.Orth.CORRECT.txt")
+write.table(orthologous, "ResultadoOrtologosMmHs.txt")
